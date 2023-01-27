@@ -19,6 +19,7 @@ static const char *const autostart[] = {
 	"wbg", "/home/gaurav/.config/wall.png", NULL,
   "dwl_status", NULL,
   "import-gsettings", NULL,
+  "sh", "-c", "sudo wpa_supplicant -i wlan0 -D nl80211 -c /etc/wpa_supplicant/wpa_supplicant.conf &", NULL,
 	NULL /* terminate */
 };
 
