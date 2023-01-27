@@ -124,6 +124,9 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 /* commands */
 static const char *termcmd[] = { "foot", NULL };
 static const char *menucmd[] = { "bemenu-run", NULL };
+static const char *playertogglecmd[] = { "playerctl", "play-pause", NULL };
+static const char *playernextcmd[] = { "playerctl", "next", NULL };
+static const char *playerprevcmd[] = { "playerctl", "previous", NULL };
 
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
@@ -131,6 +134,9 @@ static const Key keys[] = {
 
 	{ MODKEY|WLR_MODIFIER_SHIFT|WLR_MODIFIER_CTRL, XKB_KEY_M,        restartdwl,     {0} },
 
+	{ 0,                         0x1008FF14,         spawn,          {.v = playertogglecmd} },
+	{ 0,                         0x1008FF17,         spawn,          {.v = playernextcmd} },
+	{ 0,                         0x1008FF16,         spawn,          {.v = playerprevcmd} },
 	{ MODKEY,                    XKB_KEY_p,          spawn,          {.v = menucmd} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Return,     spawn,          {.v = termcmd} },
 	{ MODKEY,                    XKB_KEY_j,          focusstack,     {.i = +1} },
