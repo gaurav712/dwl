@@ -19,8 +19,12 @@ static const char *const autostart[] = {
 	"wbg", "/home/gaurav/.config/wall.png", NULL,
   "dwl_status", NULL,
   "import-gsettings", NULL,
-  "sh", "-c", "sudo wpa_supplicant -i wlan0 -D nl80211 -c /etc/wpa_supplicant/wpa_supplicant.conf &", NULL,
+  "sh", "-c", "sudo wpa_supplicant -i wlan0 -D nl80211 -c /etc/wpa_supplicant/wpa_supplicant.conf -B", NULL,
   "sh", "-c", "sudo dhcpcd", NULL,
+  "sh", "-c", "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP", NULL,
+  "dunst", NULL,
+  "start-pipewire", NULL,
+  "start-xdg-desktop-portal-wlr", NULL,
 	NULL /* terminate */
 };
 
