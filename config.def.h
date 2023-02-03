@@ -127,7 +127,7 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 
 /* commands */
 static const char *termcmd[] = { "foot", NULL };
-static const char *menucmd[] = { "bemenu-run", NULL };
+static const char *menucmd[] = { "bemenu-run", "--fn=BlexMono Nerd Font 11", "--cw=2", "--nb=#1d2021", "--nf=#ebdbb2", "--fb=#1d2021", "--ff=#ebdbb2", "--hb=#ebdbb2", "--hf=#1d2021", "--tb=#1d2021", "--tf=#ebdbb2", "--ab=#1d2021", "--af=#ebdbb2", "--hp=20", NULL };
 static const char *playertogglecmd[] = { "playerctl", "play-pause", NULL };
 static const char *playernextcmd[] = { "playerctl", "next", NULL };
 static const char *playerprevcmd[] = { "playerctl", "previous", NULL };
